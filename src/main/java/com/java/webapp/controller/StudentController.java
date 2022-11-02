@@ -31,13 +31,13 @@ public class StudentController {
 	public String saveProductInfo(@RequestBody StudentBean stdBean) {
 		System.out.println(stdBean+"hiii");
 		stdservice.addNewStudent(stdBean);
-		return "Student Save Successfully..";
+		return "Students Saved Successfully..";
 	}
 
 	@GetMapping("/{studId}")
 	public StudentBean searchStudentById(@PathVariable("studId") int studId) {
 		StudentBean bean = stdservice.getStudentById(studId);
-		System.out.println("Student by Id----" + bean);
+		//System.out.println("Student by Id----" + bean);
 		return bean;
 	}
 	
